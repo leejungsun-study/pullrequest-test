@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {margin:0; padding:0;}
+    ul  {list-style:none;}
+    /*전체 1200픽셀 */
+    body {color :#333333;}
+    #wrap {width:1200px; margin: 0 auto;}
+    header {height: 100px; 
+       background-color: burlywood;display:flex; justify-content: space-between;}
+    .logo {width:200px;}
+    .nav { width:700px;}
+
+
+    #slide {height: 300px; overflow:hidden;}
+    /* #slide>a>img {height:300px;} */
+    /*ul의너비를  3600을 하고 li 옆으로  하기
+    //ul을 1200씩*/
+    #slide ul{width:3600px; } 
+   
+
+
+
+   
+    #contents ul li {padding:20px; font-size:25px;}
+
+
+
+  </style>
+  <script src="js/jquery-1.12.3.js"></script>
+  <script>
+    $(function(){
+       setInterval(function(){
+        // $('#slide>ul').delay(1500);
+        $('#slide>ul').delay(1500).animate({marginTop : "-350px"})
+        // $('#slide>ul').delay(1500);
+        $('#slide>ul').delay(1500).animate({marginTop : "-700px"})
+        // $('#slide>ul').delay(1500);
+        $('#slide>ul').delay(1500).animate({marginTop : "0px"})
+       })
+    });
+  </script>
+</head>
+<body>
+  <div id="wrap">
+     <header>
+      
+     </header>
+     <div id="slide">
+       <ul>
+        <li> <a href="#"><img src="img/img1.jpg" alt="이미지1"></a></li>
+        <li><a href="#"><img src="img/img2.jpg" alt="이미지2"></a></li>
+        <li><a href="#"><img src="img/img3.jpg" alt="이미지3"></a></li>
+       
+       </ul>
+       
+     </div>
+     <div id="contents">
+      <h1>나의 이름 적기</h1>
+        <ul>
+          <li>1번 이정선</li>
+        </ul>
+      
+     </div>
+    
+  </div> 
+</body>
+</html>
